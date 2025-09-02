@@ -27,7 +27,7 @@ author:
   bio              : "Ph.D. Candidate in Economics"
   pronouns         : "He/Him"
   location         : "Paris, France"
-  employer         : [ "https://www.openstreetmap.org/#map=19/48.835396/2.358261", "Sorbonne Economics Centre" ]
+  employer         : "Sorbonne Economics Centre"
   uri              : # URL
   email            : "benoit.chaulvet@univ-paris1.fr"
 
@@ -214,6 +214,9 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
+  publications:
+    output: true
+    permalink: /publication/:name
   wip:
     output: true
     permalink: /:collection/:path/
