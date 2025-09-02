@@ -13,7 +13,7 @@ title                    : "Benoît Chaulvet"
 title_separator          : "-"
 name                     : &name "Benoît"
 description              : &description "Economics PhD candidate at Sorbonne Economics Centre, Paris, France. Researching interactions between the Economy and the Environment."
-url                      : https://Alejandro-Arciniegas.github.io # the base hostname & protocol for your site e.g. "https://benoit.chaulvet.github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+url                      : https://bchaulvet.github.io # the base hostname & protocol for your site e.g. "https://benoit.chaulvet.github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "benoit.chaulvet/benoit.chaulvet.github.io"
 
