@@ -1,0 +1,28 @@
+// Theme and layout variables
+
+$navicon-width: 28px;
+$navicon-height: 4px;
+$masthead-height: 80px;
+$border-radius: 4px;
+$global-font-family: Arial, Helvetica, sans-serif;
+$header-font-family: Arial, Helvetica, sans-serif;
+$type-size-3: 2em;
+$type-size-4: 1.5em;
+$type-size-5: 1.2em;
+$type-size-6: 1em;
+$monospace: 'Courier New', Courier, monospace;
+$global-transition: all 0.3s ease;
+$global-code-text-color: #c7254e;
+$global-code-background-color: #f9f2f4;
+$global-thead-color: #ddd;
+$box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+$caption-font-family: Arial, Helvetica, sans-serif;
+$small: 600px;
+$doc-font-size: 16px;
+$danger-color: #dc3545;
+$info-color: #17a2b8;
+$warning-color: #ffc107;
+$success-color: #28a745;
+$notice-color: #0074d9; 
+$sidebar-screen-min-width: 1200px;
+$sidebar-link-max-width: 220px; // Set to your desired max width // Set to your desired breakpoint // Used in mixins

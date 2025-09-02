@@ -4,6 +4,7 @@
 
 %tab-focus {
   /* Default*/
+  $warning-color: #ffc107;
   outline: thin dotted $warning-color;
   /* Webkit*/
   outline: 5px auto $warning-color;
