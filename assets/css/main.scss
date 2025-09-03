@@ -40,3 +40,9 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+    .author__avatar img {
+  width: 250px;   /* or your desired size */
+  height: 250px;
+  object-fit: cover; /* keeps the image nicely cropped */
+  border-radius: 50%;
+}
