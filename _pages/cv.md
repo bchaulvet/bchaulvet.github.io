@@ -11,54 +11,35 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* __Ph.D in Economics__, Paris 1 Panthéon-Sorbonne University, 2028 (expected)
+* __Master in International & Environmental Economics__, Paris 1 Panthéon-Sorbonne University, 2025
+* __Bachelor in Business and Administration__, [HEC Montréal](https://www.hec.ca/), 2023
+* __French Baccalaureate in Economics & Sociology__, Lycée Joliot Curie, 2019
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+__June 2024 - July 2024: Research Assistant__
+  * [Sorbonne Economic Center](https://centredeconomiesorbonne.cnrs.fr/)
+  * Missions: 
+    * Improve database for: "Does Immigration affects natuves wages? A Meta-Analysis", Aubry et al, 2024.
+    * Adapt Master 1 thesis to a letter format for publication: [_"Up in the Air: How air pollution depresses housing prices in Paris"_](https://www.tandfonline.com/doi/full/10.1080/13504851.2025.2548957)
+  * Supervisor: [Léa Marchal](https://leamarchal.fr/)
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* __October 2022 - May 2023: Intern as Analyst__
+  * [Re_Generation](https://www.re-generation.ca/fr)
+  * Missions:
+    * Build a report stating the current inclusion of sustainable development practices in Canadian
+      business schools.
+    * Create a strategy to mobilize 4000 Canadian students (email list through social media contact).
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Languages:
+  * French: Mother tongue
+  * English: Fluent
+  * German: Notions
+* Technical skills:
+  * Latex / Overleaf
+  * R studio
+  * Pack Office
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
