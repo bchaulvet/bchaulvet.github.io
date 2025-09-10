@@ -8,6 +8,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+My full CVs are available in <a href="{{ '/files/Benoît CHAULVET CV 2025 EN.pdf' | relative_url }}" target="_blank">**English**</a> and <a href="{{ '/files/Benoît CHAULVET CV 2025.pdf' | relative_url }}" target="_blank">**French**</a>.
+
 
 Education
 ======

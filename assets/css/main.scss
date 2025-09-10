@@ -51,3 +51,51 @@
 .author__github {
   font-size: 0.90em !important;
 }
+
+/* 1) Smaller page titles */
+.page__title {
+  /* adjust to taste */
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-top: 0.1em;
+  margin-bottom: 0.4em;
+}
+@media (max-width: 768px) {
+  .page__title { font-size: 1.7rem; }
+}
+
+/* 2) Colored line between top bar and content */
+.masthead {
+  border-bottom: 4px solid #007acc; /* change color/size as you like */
+}
+
+.accent {
+  color: #007acc;   // pick your color
+  font-weight: 600; // optional
+}
+/* Fixed top bar always above content */
+:root { --masthead-height: 72px; } /* tweak to match your header height */
+
+.masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3000;
+  background: #fff;                 /* opaque so text can't show through */
+  border-bottom: 4px solid #2b6cb0; /* your colored line */
+}
+
+/* Keep nav above everything inside the masthead */
+.masthead .greedy-nav { z-index: 3001; }
+
+/* Push page content below the fixed masthead */
+body { padding-top: var(--masthead-height); }
+
+/* If the header is taller on large screens, adjust */
+@media (min-width: 992px) {
+  :root { --masthead-height: 84px; } /* adjust if needed */
+}
+/* Optional: dark theme background */
+html[data-theme="dark"] .masthead,
+.theme--dark .masthead { background: #007acc; }
