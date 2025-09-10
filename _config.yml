@@ -27,8 +27,7 @@ author:
   bio              : "Ph.D. Candidate in Economics"
   pronouns         : "He/Him"
   location         : "Paris, France"
-  employer         : "Sorbonne Economics Centre"
-  orcid            : "https://orcid.org/0009-0003-0134-9642"
+  employer         : "Panthéon-Sorbonne"
   email            : "benoit.chaulvet@univ-paris1.fr"
 
   # Academic websites
@@ -36,7 +35,7 @@ author:
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : # "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
   impactstory      : # URL
-  orcid            : # "http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0009-0003-0134-9642"
   semantic         : # URL
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL

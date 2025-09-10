@@ -1,25 +1,19 @@
 ---
 ---
-
 /*
  * This file controls what is imported from /_sass
  *
  * Note that the files are processed in the order they are imported, so they are partly
    sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
-
 @import
     "vendor/breakpoint/breakpoint",
-
     "themes",
     "theme/variables",
-
     "include/mixins",
     "vendor/susy/susy",
-
     "layout/reset",
     "layout/base",
-
     "include/utilities",
     "layout/tables",
     "layout/buttons",
@@ -28,31 +22,32 @@
     "layout/navigation",
     "layout/footer",
     "syntax",
-
     "layout/forms",
-
     "layout/page",
     "layout/archive",
     "layout/sidebar",
     "layout/json_cv",
-
     "vendor/font-awesome/fontawesome",
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-    .author__avatar img {
-  width: 250px;   /* or your desired size */
-  height: 250px;
-  object-fit: cover; /* keeps the image nicely cropped */
+
+@import "academicons.css";  /* imports assets/css/academicons.css */
+
+/* Custom avatar size */
+.author__avatar img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 50%;
 }
-;
-// Reduce bio font size
+
+/* Reduce bio font size */
 .author__bio,
 .author__pronouns,
 .author__location,
 .author__employer,
 .author__email,
 .author__github {
-  font-size: 0.95em; // or try 0.9em or 14px as you prefer
+  font-size: 0.90em !important;
 }
