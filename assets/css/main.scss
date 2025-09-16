@@ -64,38 +64,275 @@
   .page__title { font-size: 1.7rem; }
 }
 
-/* 2) Colored line between top bar and content */
-.masthead {
-  border-bottom: 4px solid #007acc; /* change color/size as you like */
-}
-
 .accent {
   color: #007acc;   // pick your color
   font-weight: 600; // optional
 }
-/* Fixed top bar always above content */
-:root { --masthead-height: 72px; } /* tweak to match your header height */
 
+/* --- Navigation layout cleanup --- */
 .masthead {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 3000;
-  background: #fff;                 /* opaque so text can't show through */
-  border-bottom: 4px solid #2b6cb0; /* your colored line */
+  top:0; left:0; right:0;
+  z-index:3000;
+  background:#fff;
+  border-bottom:4px solid #2b6cb0;
 }
 
-/* Keep nav above everything inside the masthead */
-.masthead .greedy-nav { z-index: 3001; }
-
-/* Push page content below the fixed masthead */
-body { padding-top: var(--masthead-height); }
-
-/* If the header is taller on large screens, adjust */
-@media (min-width: 992px) {
-  :root { --masthead-height: 84px; } /* adjust if needed */
+.greedy-nav {
+  display:flex;
+  align-items:center;
+  flex-wrap:nowrap;
 }
-/* Optional: dark theme background */
-html[data-theme="dark"] .masthead,
-.theme--dark .masthead { background: #007acc; }
+
+.greedy-nav .site-title {
+  font-size:1rem;
+  margin-right:0.9rem;
+  white-space:nowrap;
+}
+
+.greedy-nav .visible-links {
+  display:flex;
+  flex:1 1 auto;
+  align-items:center;
+  margin:0;
+  padding:0;
+  flex-wrap:nowrap;
+}
+
+.greedy-nav .visible-links > li {
+  list-style:none;
+  white-space:nowrap;
+}
+
+.greedy-nav .visible-links > li > a {
+  padding:0.30rem 0.55rem;
+  font-size:0.82rem;
+  line-height:1;
+  display:inline-block;
+}
+
+/* Base language toggle now as outlined box */
+.lang-link {
+  margin-left:0.75rem;
+  background:transparent;          /* changed from solid */
+  color:#2b6cb0 !important;        /* default (English target) color */
+  padding:0.38rem 0.85rem;
+  font-size:0.75rem;
+  font-weight:600;
+  letter-spacing:0.5px;
+  line-height:1.05;
+  border-radius:6px;
+  text-decoration:none;
+  white-space:nowrap;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:2rem;
+  border:2px solid currentColor;   /* outline */
+  transition:background .18s ease,color .18s ease,border-color .18s ease;
+}
+
+/* Target-based colors (outlined style) */
+#lang-toggle.target-fr,
+.lang-link.target-fr {
+  color:#b3002d !important;
+  border-color:#b3002d;
+  background:rgba(179,0,45,0.08);
+}
+#lang-toggle.target-fr:hover,
+.lang-link.target-fr:hover {
+  background:#b3002d;
+  color:#fff !important;
+}
+
+#lang-toggle.target-en,
+.lang-link.target-en {
+  color:#2b6cb0 !important;
+  border-color:#2b6cb0;
+  background:rgba(43,108,176,0.10);
+}
+#lang-toggle.target-en:hover,
+.lang-link.target-en:hover {
+  background:#2b6cb0;
+  color:#fff !important;
+}
+
+/* Remove old html[lang] .lang-link color rules (overridden now) */
+/* New target-based language toggle colors */
+.lang-link.target-fr {
+  background:#b3002d;
+}
+.lang-link.target-fr:hover {
+  background:#7d001f;
+}
+.lang-link.target-en {
+  background:#2b6cb0;
+}
+.lang-link.target-en:hover {
+  background:#1f548e;
+}
+
+/* Flag toggle adjustments */
+.lang-link {
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;                 /* override previous padding */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;         /* flag size */
+  line-height: 1;
+  border-radius: 8px;
+}
+
+.flag-icon { display:inline-block; line-height:1; }
+.flag-icon svg {
+  width: 2rem;
+  height: 1.5rem;
+  display:block;
+}
+/* Optional sharper rendering */
+.flag-icon svg { shape-rendering:geometricPrecision; }
+@media (max-width:820px){
+  .flag-icon svg { width:1.15rem; height:0.85rem; }
+}
+
+.visually-hidden {
+  position:absolute !important;
+  width:1px; height:1px;
+  padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0 0 0 0);
+  white-space:nowrap; border:0;
+}
+
+/* Slight hover lift */
+.lang-link:hover {
+  transform: translateY(-1px);
+}
+
+/* Ensure outline variants still apply (reuse existing color classes) */
+/* (Existing .lang-link.target-fr / .lang-link.target-en rules above remain unchanged) */
+
+/* Keep body offset just enough for one compact line */
+body { padding-top:70px; }
+
+@media (max-width: 820px) {
+  .greedy-nav .visible-links > li > a { font-size:0.76rem; padding:0.28rem 0.45rem; }
+  .lang-link {
+    font-size:0.68rem;          /* was 0.55rem */
+    padding:0.32rem 0.70rem;    /* was 0.20rem 0.48rem */
+    min-height:1.85rem;
+  }
+}
+/* Fixed top bar always above content */
+/*:root { --masthead-height: 72px; } /* tweak to match your header height */
+
+/* CV subsection titles */
+.cv-subtitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.4rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: .5px;
+}
+
+/* --- Language theme variants --- */
+html[lang='fr'] .masthead {
+  border-bottom-color:#b3002d; /* French theme border */
+  background:#fff;
+}
+html[lang='fr'] .accent {
+  color:#b3002d;
+}
+
+html[lang='en'] .masthead {
+  border-bottom-color:#2b6cb0;
+}
+html[lang='en'] .accent {
+  color:#2b6cb0;
+}
+
+/* Optional: site title subtle color shift */
+html[lang='fr'] .site-title { color:#b3002d; }
+html[lang='en'] .site-title { color:#2b6cb0; }
+
+/* Base language toggle now sized exactly to flag ratio (3:2) */
+.lang-link {
+  width: 2.7rem;          /* width = 1.5 * height (3:2 ratio) */
+  height: 1.8rem;
+  padding: 0;
+  font-size: 0;           /* prevent inline text spacing artifacts */
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;       /* clip any overflow from aspect scaling */
+  line-height: 1;
+}
+
+/* Make the SVG fill the full box */
+.lang-link .flag-icon,
+.lang-link .flag-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Preserve aspect ratio without letterboxing (cover if ratio differs) */
+.lang-link .flag-icon svg {
+  object-fit: cover;
+}
+
+/* Hover lift still applies */
+.lang-link:hover {
+  transform: translateY(-1px);
+}
+
+/* Mobile: slightly smaller but keep ratio */
+@media (max-width: 820px) {
+  .lang-link {
+    width: 2.25rem;
+    height: 1.5rem;
+  }
+}
+
+/* === Oversized language toggle (final override) === */
+.lang-link {
+  width: 3.6rem;     /* was 2.7rem */
+  height: 2.4rem;    /* was 1.8rem */
+  border-width: 3px; /* thicker outline */
+  border-radius: 10px;
+}
+
+.lang-link .flag-icon svg {
+  /* Ensure SVG scales crisply inside larger box */
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 820px) {
+  .lang-link {
+    width: 3.0rem;
+    height: 2.0rem;
+    border-width: 2px;
+  }
+}
+
+/* === Final override: white language toggle box === */
+.lang-link,
+.lang-link.target-fr,
+.lang-link.target-en,
+#lang-toggle.target-fr,
+#lang-toggle.target-en {
+  background:#ffffff !important;
+  border-color:#ffffff !important;
+  color:inherit; /* keep flag/svg visible */
+  box-shadow:none;
+}
+
+.lang-link:hover,
+.lang-link.target-fr:hover,
+.lang-link.target-en:hover {
+  background:#ffffff !important;
+  transform: translateY(-1px);
+}

@@ -1,26 +1,57 @@
 {% include base_path %}
+{% assign current_lang = page.lang | default: site.lang_default | default: 'en' %}
+{% assign navdata = site.data.navigation.main | default: empty %}
+{% if navdata == empty %}{% assign navdata = "" | split:"|" %}{% endif %}
 
-<div class="masthead">
+{%- comment -%} Aggregate all docs (pages + collections) for counterpart lookup {%- endcomment -%}
+{% assign all_docs = site.pages %}
+{% for coll in site.collections %}
+  {% assign all_docs = all_docs | concat: coll.docs %}
+{% endfor %}
+
+{%- comment -%}
+Button shows the OTHER language (target). If you want current language instead, swap assignments for lang_label only.
+{%- endcomment -%}
+{% if current_lang == 'en' %}
+  {% assign target_lang = 'fr' %}
+  {% assign lang_label = 'FR' %}
+  {% assign fallback_url = '/fr/' %}
+{% else %}
+  {% assign target_lang = 'en' %}
+  {% assign lang_label = 'EN' %}
+  {% assign fallback_url = '/' %}
+{% endif %}
+
+{%- assign lang_url = fallback_url -%}
+{%- if page.ref -%}
+  {% assign counterpart = all_docs | where:'ref',page.ref | where:'lang',target_lang | first %}
+  {% if counterpart and counterpart.url %}{% assign lang_url = counterpart.url %}{% endif %}
+{%- endif -%}
+
+<div class="masthead" data-lang="{{ current_lang }}" data-target="{{ target_lang }}">
   <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
-          </li>
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
+    <nav id="site-nav" class="greedy-nav">
+      <a class="site-title" href="{% if current_lang == 'fr' %}{{ '/fr/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">{{ site.title }}</a>
+      <ul class="visible-links">
+        {% for item in navdata %}
+          {% assign item_title = item.title[current_lang] | default: item.title.en | default: item.title.fr %}
+          {% assign item_url   = item.url[current_lang]   | default: item.url.en   | default: item.url.fr %}
+          <li class="masthead__menu-item"><a href="{{ item_url | relative_url }}">{{ item_title }}</a></li>
+        {% endfor %}
+      </ul>
+      <a id="lang-toggle" class="lang-link target-{{ target_lang }}" href="{{ lang_url | relative_url }}"
+         aria-label="Switch language to {% if target_lang == 'fr' %}French{% else %}English{% endif %}">
+        <span class="flag-icon" aria-hidden="true">
+          {% if target_lang == 'fr' %}
+            {% include flag-fr.svg %}
+          {% else %}
+            {% include flag-en.svg %}
+          {% endif %}
+        </span>
+        <span class="visually-hidden">{{ lang_label }}</span>
+      </a>
+      <button class="greedy-nav__toggle hidden" type="button" aria-label="Menu"><div class="navicon"></div></button>
+      <ul class="hidden-links hidden"></ul>
+    </nav>
   </div>
 </div>

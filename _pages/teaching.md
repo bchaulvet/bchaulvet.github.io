@@ -3,6 +3,8 @@ layout: archive
 title: "Teaching"
 permalink: /teaching/
 author_profile: true
+lang: en
+ref: teaching
 ---
 
 <div class="teaching-list">

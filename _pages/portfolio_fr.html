@@ -1,0 +1,15 @@
+---
+// filepath: c:\Website\_pages\portfolio_fr.md
+layout: single
+title: "Documents de travail"
+permalink: /fr/portfolio/
+lang: fr
+ref: working_papers
+---
+
+{% include base_path %}
+
+
+{% for post in site.portfolio %}
+  {% include archive-single.html %}
+{% endfor %}

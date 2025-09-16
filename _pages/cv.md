@@ -5,21 +5,20 @@ permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
+lang: en
+ref: cv
 ---
 
 {% include base_path %}
 My full CVs are available in <a href="{{ '/files/Benoît CHAULVET CV 2025 EN.pdf' | relative_url }}" target="_blank">**English**</a> and <a href="{{ '/files/Benoît CHAULVET CV 2025.pdf' | relative_url }}" target="_blank">**French**</a>.
 
-
-Education
-======
+<h3 class="cv-subtitle">Education</h3>
 * __Ph.D in Economics__, Paris 1 Panthéon-Sorbonne University, 2028 (expected)
 * __Master in International & Environmental Economics__, Paris 1 Panthéon-Sorbonne University, 2025
 * __Bachelor in Business and Administration__, [HEC Montréal](https://www.hec.ca/), 2023
 * __French Baccalaureate in Economics & Sociology__, Lycée Joliot Curie, 2019
 
-Work experience
-======
+<h3 class="cv-subtitle">Work experience</h3>
 __June 2024 - July 2024: Research Assistant__
   * [Sorbonne Economic Center](https://centredeconomiesorbonne.cnrs.fr/)
   * Missions: 
@@ -34,12 +33,15 @@ __June 2024 - July 2024: Research Assistant__
       business schools.
     * Create a strategy to mobilize 4000 Canadian students (email list through social media contact).
   
-Skills
-======
+<h3 class="cv-subtitle">Skills</h3>
 * Languages:
   * French: Mother tongue
   * English: Fluent
   * German: Notions
+* Technical skills:
+  * Latex / Overleaf
+  * R studio
+  * Pack Office
 * Technical skills:
   * Latex / Overleaf
   * R studio

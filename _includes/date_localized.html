@@ -1,0 +1,44 @@
+{%- comment -%}
+Usage:
+  {% include date_localized.html date=pub.date lang=page.lang format='long' %}
+Options:
+  format: 'long' (default fr -> "29 Août 2025"), 'numeric' ("29 08 2025")
+  capitalize=true  (optional; capitalize month for fr long)
+{%- endcomment -%}
+{%- assign lang = include.lang | default: 'en' -%}
+{%- assign fmt = include.format | default: 'long' -%}
+{%- assign year = include.date | date: "%Y" -%}
+{%- assign day  = include.date | date: "%-d" -%}
+{%- assign month_num = include.date | date: "%m" -%}
+
+{%- if lang == 'fr' -%}
+  {%- case month_num -%}
+    {%- when '01' -%}{%- assign month_name='janvier' -%}
+    {%- when '02' -%}{%- assign month_name='février' -%}
+    {%- when '03' -%}{%- assign month_name='mars' -%}
+    {%- when '04' -%}{%- assign month_name='avril' -%}
+    {%- when '05' -%}{%- assign month_name='mai' -%}
+    {%- when '06' -%}{%- assign month_name='juin' -%}
+    {%- when '07' -%}{%- assign month_name='juillet' -%}
+    {%- when '08' -%}{%- assign month_name='août' -%}
+    {%- when '09' -%}{%- assign month_name='septembre' -%}
+    {%- when '10' -%}{%- assign month_name='octobre' -%}
+    {%- when '11' -%}{%- assign month_name='novembre' -%}
+    {%- when '12' -%}{%- assign month_name='décembre' -%}
+  {%- endcase -%}
+  {%- if fmt == 'numeric' -%}
+    {{ day | prepend: day.size == 1 ? '' : '' }} {{ month_num }} {{ year }}
+  {%- else -%}
+    {%- if include.capitalize == true or include.capitalize == 'true' -%}
+      {{ day }} {{ month_name | capitalize }} {{ year }}
+    {%- else -%}
+      {{ day }} {{ month_name }} {{ year }}
+    {%- endif -%}
+  {%- endif -%}
+{%- else -%}
+  {%- if fmt == 'numeric' -%}
+    {{ include.date | date: "%d %m %Y" }}
+  {%- else -%}
+    {{ include.date | date: "%B %d, %Y" }}
+  {%- endif -%}
+{%- endif -%}

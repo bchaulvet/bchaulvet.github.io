@@ -6,22 +6,35 @@
 #
 # NOTE that only one of the CV options should be selected, the first is for the
 #      Markdown formatted page while the second is generated using JSON.
-
 main:
-  - title: "Publications"
-    url: /publications/  
+  - key: publications
+    title:
+      en: "Publications"
+      fr: "Publications"
+    url:
+      en: /publications/
+      fr: /fr/publications/
 
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Working Papers"
-    url: /portfolio/
-        
-  - title: "CV"
-    url: /cv/
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
-  #- title: "Guide"
-   # url: /markdown/
+  - key: teaching
+    title:
+      en: "Teaching"
+      fr: "Enseignements"
+    url:
+      en: /teaching/
+      fr: /fr/enseignements/
+
+  - key: working
+    title:
+      en: "Working Papers"
+      fr: "Documents de travail"
+    url:
+      en: /portfolio/
+      fr: /fr/portfolio/
+
+  - key: cv
+    title:
+      en: "CV"
+      fr: "CV"
+    url:
+      en: /cv/
+      fr: /fr/cv/

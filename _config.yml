@@ -17,6 +17,10 @@ url                      : https://bchaulvet.github.io # the base hostname & pro
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "benoit.chaulvet/benoit.chaulvet.github.io"
 
+# Add explicit languages (new)
+languages                : ["en","fr"]
+lang_default             : "en"
+
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
@@ -225,6 +229,9 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
+  enseignements:
+    output: true
+    permalink: /fr/enseignements/:name
   miscellaneous:
     output: true
     permalink: /:collection/:path/
@@ -285,6 +292,18 @@ defaults:
       author_profile: true
       share: true
       comments: true
+  # Add (new) explicit default for French content under /fr/
+  - scope:
+      path: "fr"
+    values:
+      lang: fr
+      locale: fr-FR
+  # Add (new) catch‑all ensuring English default (only if lang not already set)
+  - scope:
+      path: ""
+    values:
+      lang: en
+      locale: en-US
 
 
 # Sass/SCSS
