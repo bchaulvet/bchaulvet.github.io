@@ -10,7 +10,7 @@ ref: cv
 ---
 
 {% include base_path %}
-My full CVs are available in <a href="{{ '/files/Benoît CHAULVET CV 2025 EN.pdf' | relative_url }}" target="_blank">**English**</a> and <a href="{{ '/files/Benoît CHAULVET CV 2025.pdf' | relative_url }}" target="_blank">**French**</a>.
+My full CVs are available in <a href="{{ '/files/Benoît CHAULVET CV 2025 EN.pdf' | uri_escape | relative_url }}" target="_blank" rel="noopener">**English**</a> and <a href="{{ '/files/Benoît CHAULVET CV 2025.pdf' | uri_escape | relative_url }}" target="_blank" rel="noopener">**French**</a>.
 
 <h3 class="cv-subtitle">Education</h3>
 * __Ph.D in Economics__, Paris 1 Panthéon-Sorbonne University, 2028 (expected)

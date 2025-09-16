@@ -8,9 +8,9 @@ ref: cv
 ---
 
 Mon CV complet est disponible en
-<a href="{{ '/files/cv_fr.pdf' | relative_url }}" target="_blank">Français</a>
+<a href="{{ '/files/cv_fr.pdf' | relative_url }}" target="_blank" rel="noopener">Français</a>
 et en
-<a href="{{ '/files/cv_en.pdf' | relative_url }}" target="_blank">Anglais</a>.
+<a href="{{ '/files/cv_en.pdf' | relative_url }}" target="_blank" rel="noopener">Anglais</a>.
 
 <h3 class="cv-subtitle">Formation</h3>
 * __Doctorat en économie__, Université Paris 1 Panthéon-Sorbonne, 2028 (prévu)
