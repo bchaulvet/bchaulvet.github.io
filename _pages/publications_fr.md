@@ -1,13 +1,13 @@
 ---
 layout: single
-title: "Publications"
+title: ""
 permalink: /fr/publications/
 redirect_from:
   - /fr/publications_fr/
 lang: fr
 ref: publications
 ---
-
+## Publications
 <div class="publications-list">
   {% assign pubs = site.publications | where:"lang","fr" %}
   {% for pub in pubs %}
@@ -23,3 +23,8 @@ ref: publications
     <br>
   {% endfor %}
 </div>
+
+<hr class="section-divider">
+
+## Documents de travail
+Bientôt disponible !!

@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About"
+title: ""
 layout: single
 author_profile: true
 redirect_from:
@@ -19,5 +19,5 @@ This leads us to the PhD thesis I'm currently working on. It aims to better unde
 - <span class="accent">Geopolitical Tensions on Rare Resources:</span> Understanding how Critical Raw Materials essential for the green transition are threatened by geopolitical frictions.
 - <span class="accent">Economic Development and Biodiversity:</span> How structural transformation over time influences biodiversity outcomes.
 
-More information about me can be found on my [**CV**]({{ '/cv/' | relative_url }}).  
+More information about me can be found on my **CV** (in <a href="{{ '/files/Benoît CHAULVET CV 2025 EN.pdf' | uri_escape | relative_url }}" target="_blank" rel="noopener">**English**</a> and <a href="{{ '/files/Benoît CHAULVET CV 2025.pdf' | uri_escape | relative_url }}" target="_blank" rel="noopener">**French**</a>).  
 Feel free to contact me by email or via my socials.

@@ -9,8 +9,8 @@
 main:
   - key: publications
     title:
-      en: "Publications"
-      fr: "Publications"
+      en: "Reseach"
+      fr: "Travaux de Recherche"
     url:
       en: /publications/
       fr: /fr/publications/
@@ -22,19 +22,3 @@ main:
     url:
       en: /teaching/
       fr: /fr/enseignements/
-
-  - key: working
-    title:
-      en: "Working Papers"
-      fr: "Documents de travail"
-    url:
-      en: /portfolio/
-      fr: /fr/portfolio/
-
-  - key: cv
-    title:
-      en: "CV"
-      fr: "CV"
-    url:
-      en: /cv/
-      fr: /fr/cv/

@@ -1,11 +1,11 @@
 ---
 layout: single
-title: "Publications"
+title: ""
 permalink: /publications/
 lang: en
 ref: publications
 ---
-
+## Publications
 <div class="publications-list">
   {% assign pubs = site.publications | where:"lang","en" %}
   {% for pub in pubs %}
@@ -21,3 +21,8 @@ ref: publications
     <br>
   {% endfor %}
 </div>
+
+<hr class="section-divider">
+
+## Working Paper
+Coming soon!!
