@@ -12,9 +12,6 @@ main:
       en: "Reseach"
       fr: "Travaux de Recherche"
     url:
-      en: /publications/
-      fr: /fr/publications/
-
   - key: teaching
     title:
       en: "Teaching"
