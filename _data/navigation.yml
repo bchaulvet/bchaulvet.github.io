@@ -8,10 +8,10 @@
 #      Markdown formatted page while the second is generated using JSON.
 main:
   - key: research
-    title: 
+    title:
       en: "Research"
       fr: "Travaux de recherche"
-    url:
+    url: 
       en: /publications/
       fr: /fr/publications/
   - key: teaching
