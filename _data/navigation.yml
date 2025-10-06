@@ -9,9 +9,11 @@
 main:
   - key: publications
     title:
-      en: "Reseach"
-      fr: "Travaux de Recherche"
+      en: "Research"
+      fr: "Travaux de recherche"
     url:
+      en: /publications/
+      fr: /fr/publications/
   - key: teaching
     title:
       en: "Teaching"
