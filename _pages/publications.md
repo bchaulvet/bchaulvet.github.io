@@ -5,7 +5,7 @@ permalink: /publications/
 lang: en
 ref: publications
 ---
-## Publications
+## <span class="accent">Publications</span>
 <div class="publications-list">
   {% assign pubs = site.publications | where:"lang","en" %}
   {% for pub in pubs %}
@@ -15,8 +15,8 @@ ref: publications
       {% if pub.journal %}<br><strong>Journal:</strong> {{ pub.journal }}{% endif %}
       {% if pub.date %}<br><strong>Date:</strong> {% include date_localized.html date=pub.date lang=page.lang format='long' %}{% endif %}
       {% if pub.excerpt %}<br><strong>About:</strong> {{ pub.excerpt }}{% endif %}
-      {% if pub.paperurl %}<br><a href="{{ pub.paperurl }}" target="_blank">Read the paper</a>{% endif %}
-      {% if pub.workingpaperurl %}<br><a href="{{ pub.workingpaperurl | relative_url }}" target="_blank">Working Paper</a>{% endif %}
+      {% if pub.paperurl %}<br><a href="{{ pub.paperurl }}" target="_blank"><span class="accent">Read the paper</span></a>{% endif %}
+      {% if pub.workingpaperurl %}<br><a href="{{ pub.workingpaperurl | relative_url }}" target="_blank"><span class="accent">Working paper</span></a>{% endif %}
     </div>
     <br>
   {% endfor %}
@@ -24,5 +24,5 @@ ref: publications
 
 <hr class="section-divider">
 
-## Working Paper
+## <span class="accent">Working Paper</span>
 Coming soon!!
