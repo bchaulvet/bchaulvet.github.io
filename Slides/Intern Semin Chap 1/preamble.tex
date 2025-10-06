@@ -1,0 +1,48 @@
+% Packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+
+% Bibliography (uses refs.bib)
+\usepackage[backend=biber,style=authoryear,maxcitenames=2]{biblatex}
+\addbibresource{refs.bib}
+
+% Theme setup
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+% Custom colors (adjust as needed)
+\definecolor{Primary}{HTML}{003366}
+\definecolor{Accent}{HTML}{DD6E0F}
+\setbeamercolor{title}{fg=Primary}
+\setbeamercolor{frametitle}{fg=Primary}
+\setbeamercolor{structure}{fg=Primary}
+
+% Convenience macros
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\highlight}[1]{\textcolor{Accent}{#1}}
+
+% Figure path
+\graphicspath{{figs/}}
+
+% Reduce clutter in itemize
+\setlength{\itemsep}{4pt}
+
+% Optional: compact math
+\apptocmd\normalsize{%
+  \abovedisplayskip=8pt plus 2pt minus 4pt
+  \belowdisplayskip=8pt plus 2pt minus 4pt
+}{}{}

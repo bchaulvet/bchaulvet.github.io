@@ -7,8 +7,8 @@
 # NOTE that only one of the CV options should be selected, the first is for the
 #      Markdown formatted page while the second is generated using JSON.
 main:
-  - key: publications
-    title:
+  - key: research
+    title: 
       en: "Research"
       fr: "Travaux de recherche"
     url:
