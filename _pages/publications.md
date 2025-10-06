@@ -1,6 +1,6 @@
 ---
 layout: single
-title: ""
+title: "Research"
 permalink: /publications/
 lang: en
 ref: publications

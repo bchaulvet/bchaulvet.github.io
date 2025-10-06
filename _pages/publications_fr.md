@@ -1,6 +1,6 @@
 ---
 layout: single
-title: ""
+title: "Travaux de recherche"
 permalink: /fr/publications/
 redirect_from:
   - /fr/publications_fr/
