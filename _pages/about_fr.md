@@ -14,6 +14,6 @@ Mon but est d'éclaircir les manières dont nos sociétés impactent l'environne
 - <span class="accent">Développement Économique et Biodiversité :</span> En prenant du recul, le but de cette recherche est de comprendre comment les transformations structurelles économiques au cours du temps ont affecté les niveaux de biodiversité.
 
 Pour plus d'informations, je vous invite à jeter un coup d'œil à mon **CV** (en
-<a href="{{ '/files/cv_fr.pdf' | relative_url }}" target="_blank" rel="noopener">Français</a>
+<a href="{{ '/files/Benoît CHAULVET CV 2025.pdf' | uri_escape | relative_url }}" target="_blank" rel="noopener">Français</a>
 et en
-<a href="{{ '/files/cv_en.pdf' | relative_url }}" target="_blank" rel="noopener">Anglais</a>).
+<a href="{{ '/files/Benoît CHAULVET CV 2025 EN.pdf' | uri_escape | relative_url }}" target="_blank" rel="noopener">Anglais</a>).
