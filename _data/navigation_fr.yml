@@ -1,2 +1,13 @@
+main:
+  - key: research
+    title:
+      fr: "Travaux de recherche"
+    url:
+      fr: /fr/publications/
+  - key: teaching
+    title:
+      fr: "Enseignements"
+    url:
+      fr: /fr/enseignements/
 
 

@@ -1,9 +1,8 @@
 ---
-title: "Teaching Assistant"
+title: "Teaching Assistant (Winter / Spring 2026)"
 coursetitle: "International Trade"
 professors: "Léa Marchal"
 venue: "University Paris 1 Panthéon-Sorbonne"
-date: Winter / Spring 2026
 location: "Paris, France"
 lang: fr
 ref: intertrade-2026
