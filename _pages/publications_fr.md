@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Travaux de recherche"
+title: ""
 permalink: /fr/publications/
 redirect_from:
   - /fr/publications_fr/
@@ -26,5 +26,22 @@ ref: publications
 
 <hr class="section-divider">
 
-## <span class="accent">Documents de travail</span>
-Bientôt disponible !!
+## <span class="accent">Projets en cours</span>
+<div class="publications-list">
+  {% assign has_projects = false %}
+  {% for project in site.wip %}
+    {% if project.lang == page.lang %}
+      {% assign has_projects = true %}
+      <div class="publication-item" style="padding-left: 1.3em; text-indent: -1.3em;">
+        <div style="font-size: 1.1em; font-weight: 700; margin-bottom: 0.5rem;">• {{ project.title }}</div>
+        {% if project.co-authors %}<div style="margin-top: 0.35rem; padding-left: 1.3em; text-indent: -1.3em;"><strong>Co-auteurs:</strong> {{ project.co-authors }}</div>{% endif %}
+        {% if project.excerpt %}<div style="margin-top: 0.35rem; padding-left: 1.3em; text-indent: -1.3em;"><strong>A propos:</strong> {{ project.excerpt }}</div>{% endif %}
+        {% if project.date %}<br><strong>Démarré:</strong> {% include date_localized.html date=project.date lang=page.lang format='long' capitalize=true %}{% endif %}
+      </div>
+      <br>
+    {% endif %}
+  {% endfor %}
+  {% unless has_projects %}
+    <p>Bientôt disponible !!</p>
+  {% endunless %}
+</div>
