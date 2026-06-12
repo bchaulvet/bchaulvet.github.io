@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Research"
+title: ""
 permalink: /publications/
 lang: en
 ref: publications
@@ -24,5 +24,22 @@ ref: publications
 
 <hr class="section-divider">
 
-## <span class="accent">Working Paper</span>
-Coming soon!!
+## <span class="accent">Working Projects</span>
+<div class="publications-list">
+  {% assign has_projects = false %}
+  {% for project in site.wip %}
+    {% if project.lang == page.lang %}
+      {% assign has_projects = true %}
+      <div class="publication-item" style="padding-left: 1.3em; text-indent: -1.3em;">
+        <div style="font-size: 1.1em; font-weight: 700; margin-bottom: 0.5rem;">• {{ project.title }}</div>
+        {% if project.co-authors %}<div style="margin-top: 0.35rem; padding-left: 1.3em; text-indent: -1.3em;"><strong>Co-authors:</strong> {{ project.co-authors }}</div>{% endif %}
+        {% if project.excerpt %}<div style="margin-top: 0.35rem; padding-left: 1.3em; text-indent: -1.3em;"><strong>About:</strong> {{ project.excerpt }}</div>{% endif %}
+        {% if project.date %}<br><strong>Started:</strong> {% include date_localized.html date=project.date lang=page.lang format='long' %}{% endif %}
+      </div>
+      <br>
+    {% endif %}
+  {% endfor %}
+  {% unless has_projects %}
+    <p>Coming soon!!</p>
+  {% endunless %}
+</div>

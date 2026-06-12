@@ -1,5 +1,5 @@
 ---
-title: "Chargé de TD"
+title: "Chargé de TD (Hiver / Printemps 2026)"
 coursetitle: "Commerce International"
 professors: "Léa Marchal"
 venue: "Université Paris 1 Panthéon-Sorbonne"

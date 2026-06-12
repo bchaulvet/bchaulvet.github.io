@@ -1,6 +1,10 @@
 {% include base_path %}
 {% assign current_lang = page.lang | default: site.lang_default | default: 'en' %}
-{% assign navdata = site.data.navigation.main | default: empty %}
+{% if current_lang == 'fr' %}
+  {% assign navdata = site.data.navigation_fr.main | default: site.data.navigation.main | default: empty %}
+{% else %}
+  {% assign navdata = site.data.navigation.main | default: empty %}
+{% endif %}
 {% if navdata == empty %}{% assign navdata = "" | split:"|" %}{% endif %}
 
 {%- comment -%} Aggregate all docs (pages + collections) for counterpart lookup {%- endcomment -%}
